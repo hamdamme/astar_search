@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from astar import a_star_search
 
-st.title("A* Search  Digit Puzzle Solver")
+st.title("A* Search – Digit Puzzle Solver")
 st.write("Enter a start, goal, and forbidden states to see the optimal path and search graph.")
 
 # User input
@@ -16,6 +16,9 @@ if st.button("Run A* Search"):
     path, trace = a_star_search(start, goal, bad)
 
     if path:
+        # Ensure everything is string for NetworkX consistency
+        path = [str(p) for p in path]
+
         st.success("Optimal Path: " + " → ".join(path))
 
         # Show search trace
@@ -33,9 +36,9 @@ if st.button("Run A* Search"):
         parent = None
         for line in trace:
             if line.startswith("Expanding Node:"):
-                parent = line.split()[2]
+                parent = str(line.split()[2])
             elif line.strip().startswith("Generated successor:") and parent:
-                child = line.split()[2]
+                child = str(line.split()[2])
                 edges.append((parent, child))
 
         # Build graph
