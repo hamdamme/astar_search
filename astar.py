@@ -73,7 +73,7 @@ def a_star_search(start, goal, bad):
         print(f"Expanding Node: {current_node.start} with cost {current_node.move_cost}")
 
         if current_node.start == int(goal):
-            return reconstruct_path(current_node)
+            return reconstruct_path(current_node), trace
 
         explored_set.add(current_node.start)
 
