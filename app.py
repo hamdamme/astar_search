@@ -5,7 +5,12 @@ from astar import a_star_search
 
 st.title("A* Search Digit Puzzle Solver")
 st.write("Enter a start, goal, and forbidden states to see the optimal path and search graph.")
-
+st.markdown(
+    """
+    📖 [Read full project instructions on GitHub](https://github.com/hamdamme/astar_search#readme)
+    """,
+    unsafe_allow_html=True
+)
 # User input
 start = st.text_input("Start state", "565")
 goal = st.text_input("Goal state", "777")
