@@ -1,3 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+A* Search Algorithm Digit Puzzle Solver
+
+Author: Hamdam Aynazarov
+GitHub: https://github.com/hamdamme
+
+Description:
+    This program implements an A* search algorithm to solve a digit puzzle.
+    It transforms a starting number into a goal number by incrementing or 
+    decrementing digits while avoiding forbidden states.
+
+Usage:
+    python astar.py S=<start> G=<goal> "bad=[list of bad states]"
+
+Example:
+    python astar.py S=565 G=777 "bad=[665,666,677]"
+"""
+
 import sys
 
 class Astar:
@@ -32,8 +51,6 @@ class Astar:
         
         return successors
 
-
-
 def get_heuristic(start:str, goal:str)->int:
     start = str(start).zfill(3)
     goal = str(goal).zfill(3)
@@ -43,16 +60,6 @@ def get_heuristic(start:str, goal:str)->int:
         differences.append(difference)
     total_difference = sum(differences)
     return total_difference
-
-
-
-
-
-
-
-
-
-
 
 def a_star_search(start, goal, bad):
     frontier = []
@@ -78,22 +85,6 @@ def a_star_search(start, goal, bad):
                 
 
     return None
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def add_to_frontier(node, frontier):
     frontier.append(node)
