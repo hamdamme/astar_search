@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from astar import a_star_search
 
-st.title("A* Search – Digit Puzzle Solver")
+st.title("A* Search  Digit Puzzle Solver")
 st.write("Enter a start, goal, and forbidden states to see the optimal path and search graph.")
 
 # User input
