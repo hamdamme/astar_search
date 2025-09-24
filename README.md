@@ -5,7 +5,7 @@ The puzzle transforms a starting number into a goal number by incrementing or de
 
 ---
 
-## ✨ Features
+## Features
 - Implements the A* search algorithm with cost + heuristic.
 - Expands nodes step by step and prints progress.
 - Detects forbidden states (`bad` numbers) and avoids them.
@@ -14,7 +14,7 @@ The puzzle transforms a starting number into a goal number by incrementing or de
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository:
    ```bash
