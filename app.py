@@ -26,7 +26,7 @@ if st.button("Run A* Search"):
         for step in trace:
             st.text(step)
 
-        # --- Visualization ---
+               # --- Visualization ---
         st.subheader("Search Graph")
 
         G = nx.DiGraph()
@@ -44,6 +44,10 @@ if st.button("Run A* Search"):
         # Build graph
         G.add_edges_from(edges)
 
+        # Make sure all path nodes exist in the graph
+        for node in path:
+            G.add_node(node)
+
         # Highlight optimal path
         path_edges = list(zip(path, path[1:])) if path else []
 
@@ -59,6 +63,5 @@ if st.button("Run A* Search"):
 
         st.pyplot(plt.gcf())
         plt.clf()
-
     else:
         st.error("No path found.")
