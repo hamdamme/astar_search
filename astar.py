@@ -66,7 +66,7 @@ def a_star_search(start, goal, bad):
     start_node = Astar(int(start), int(goal))
     add_to_frontier(start_node, frontier)
     explored_set = set()
-
+    trace = []
     while frontier:
         current_node = get_next_node(frontier)
         
@@ -84,7 +84,7 @@ def a_star_search(start, goal, bad):
                 add_to_frontier(successor, frontier)
                 
 
-    return None
+    return None, trace
 
 def add_to_frontier(node, frontier):
     frontier.append(node)
