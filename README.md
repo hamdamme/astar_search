@@ -1,11 +1,11 @@
-# A* Search Algorithm – Digit Puzzle Solver
+# A* Search Algorithm – Digit constraint problem
 
 This project implements the A* search algorithm to solve a 3-digit digit puzzle.  
 The solver transforms a starting number into a goal number by incrementing or decrementing digits, while avoiding forbidden states.
 
 ---
 
-## 🧩 Puzzle Rules
+## 🧩 Digits Promlem Rules
 
 - You start with a **3-digit number** `S`.
 - Your goal is to reach another **3-digit number** `G`.
